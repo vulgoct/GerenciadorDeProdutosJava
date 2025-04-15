@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuDeOpçoes {
     public static void main(String[] args) {
         int opcao = 5;
         Scanner menu = new Scanner(System.in);
+        ArrayList<String> produtos = new ArrayList<String>();
 
         do {
             System.out.println("_________________________");
@@ -23,11 +25,17 @@ public class MenuDeOpçoes {
                     System.out.println("_________________________");
                     System.out.println("Cadastro de Produtos");
                     System.out.println("_________________________");
+
+                    System.out.print("Digite Seu Novo Produto: ");
+                    String produto = menu.nextLine();
+                    produtos.add(produto);
                     break;
+
                 case 2:
                     System.out.println("_________________________");
                     System.out.println("Listagem de Produtos");
                     System.out.println("_________________________");
+
                     break;
                 case 3:
                     System.out.println("_________________________");
@@ -41,7 +49,7 @@ public class MenuDeOpçoes {
                     break;
                 case 5:
                     System.out.println("_________________________");
-                    System.out.println("Sair do Menu");
+                    System.out.println("Saindo do menu");
                     System.out.println("_________________________");
                     break;
                 default:
