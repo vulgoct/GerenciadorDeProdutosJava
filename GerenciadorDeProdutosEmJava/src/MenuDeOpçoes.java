@@ -36,12 +36,19 @@ public class MenuDeOpçoes {
                     System.out.println("Listagem de Produtos");
                     System.out.println("_________________________");
 
+                    for (int i = 0; i < produtos.size(); i++){
+                        int index = i + 1;
+                        System.out.println(index + " - " + produtos.get(i));
+                    }
                     break;
+
                 case 3:
                     System.out.println("_________________________");
                     System.out.println("Exclusão de Produtos");
                     System.out.println("_________________________");
+                    }
                     break;
+
                 case 4:
                     System.out.println("_________________________");
                     System.out.println("Alteração de Produtos");
