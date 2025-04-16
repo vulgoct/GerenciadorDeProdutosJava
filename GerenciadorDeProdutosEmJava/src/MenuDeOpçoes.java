@@ -46,9 +46,13 @@ public class MenuDeOpçoes {
                     System.out.println("_________________________");
                     System.out.println("Exclusão de Produtos");
                     System.out.println("_________________________");
-                    }
-                    break;
 
+                    System.out.print("Digite o numero do produto que você deseja remover: ");
+                    int index = menu.nextInt();
+                    index = index - 1;
+                    System.out.println(produtos.remove(index));
+                    break;
+                    
                 case 4:
                     System.out.println("_________________________");
                     System.out.println("Alteração de Produtos");
