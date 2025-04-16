@@ -5,7 +5,7 @@ public class MenuDeOpçoes {
     public static void main(String[] args) {
         int opcao = 5;
         Scanner menu = new Scanner(System.in);
-        ArrayList<String> produtos = new ArrayList<String>();
+        ArrayList<String> produtos = new ArrayList<>();
 
         do {
             System.out.println("_________________________");
@@ -52,12 +52,22 @@ public class MenuDeOpçoes {
                     index = index - 1;
                     System.out.println(produtos.remove(index));
                     break;
-                    
+
                 case 4:
                     System.out.println("_________________________");
                     System.out.println("Alteração de Produtos");
                     System.out.println("_________________________");
+
+                    System.out.print("Digite o numero do produto que você deseja alterar: ");
+                    int alt = menu.nextInt();
+                    menu.nextLine();
+                    alt = alt - 1;
+
+                    System.out.print("Digite o novo nome do produto: ");
+                    String novonome = menu.nextLine();
+                    produtos.set(alt, novonome);
                     break;
+
                 case 5:
                     System.out.println("_________________________");
                     System.out.println("Saindo do menu");
